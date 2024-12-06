@@ -5,11 +5,13 @@ bool proverka(){
             return true;
         }
     }
+    // Проверка по вертикали
     for (int i = 0; i < BOARD_SIZE; i++) {
         if (board[0][i] == player && board[1][i] == player && board[2][i] == player) {
             return true;
         }
     }
+    // Проверка по диагоналям
     if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
         return true;
     }
@@ -17,4 +19,3 @@ bool proverka(){
         return true;
     }
 }
-
