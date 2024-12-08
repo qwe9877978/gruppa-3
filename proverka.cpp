@@ -1,3 +1,16 @@
+// Функция для проверки, заполнены ли все клетки
+bool isBoardFull() {
+    for (int i = 0; i < BOARD_SIZE; i++) {
+        for (int j = 0; j < BOARD_SIZE; j++) {
+            if (board[i][j] == EMPTY) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+
 // Функция для проверки, выиграл ли игрок с заданным символом
 bool checkWin(char player) {
     // Проверка по горизонтали
