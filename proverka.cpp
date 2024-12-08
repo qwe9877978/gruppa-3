@@ -1,5 +1,6 @@
-bool proverka(){
-  // Проверка по горизонтали
+// Функция для проверки, выиграл ли игрок с заданным символом
+bool checkWin(char player) {
+    // Проверка по горизонтали
     for (int i = 0; i < BOARD_SIZE; i++) {
         if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
             return true;
@@ -18,4 +19,15 @@ bool proverka(){
     if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
         return true;
     }
+    return false;
 }
+
+
+
+
+
+// Проверка на выигрыш
+        if (checkWin(currentPlayer)) {
+            gameOver = true;
+            cout << "Игрок " << currentPlayer << " победил!" << endl;
+        }
