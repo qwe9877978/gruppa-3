@@ -34,18 +34,3 @@ bool checkWin(char player) {
     }
     return false;
 }
-
-
-// Проверка на выигрыш
-        if (checkWin(currentPlayer)) {
-            gameOver = true;
-            cout << "Игрок " << currentPlayer << " победил!" << endl;
-        }
- // Проверка на выигрыш(Ничья)
-        else if (isBoardFull()) {
-            gameOver = true;
-            cout << "Ничья!" << endl;
-        }
-
-// Переключение игрока
-        currentPlayer = (currentPlayer == X) ? O : X;
