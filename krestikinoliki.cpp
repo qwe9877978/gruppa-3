@@ -12,7 +12,7 @@ int game() {
         cin >> row >> col;
 
         // Валидация хода
-        if (row < 1  col < 1  board[row - 1][col - 1] != EMPTY) {
+        if (row < 1  row > BOARD_SIZE  col < 1  col > BOARD_SIZE  board[row - 1][col - 1] != EMPTY) {
             cout << "Неверный ход. Попробуйте снова." << endl;
             continue;
         }
