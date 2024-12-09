@@ -1,4 +1,4 @@
-int main() {
+int game() {
     char currentPlayer = X;
     bool gameOver = false;
 
