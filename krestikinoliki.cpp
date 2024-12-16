@@ -23,12 +23,14 @@ int game() {
         // Проверка на выигрыш
         if (checkWin(currentPlayer)) {
             gameOver = true;
+            printBoard();
             cout << "Игрок " << currentPlayer << " победил!" << endl;
         }
 
         // Ничья
         else if (isBoardFull()) {
             gameOver = true;
+            printBoard();
             cout << "Ничья!" << endl;
         }
 
